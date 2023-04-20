@@ -1,0 +1,6 @@
+# ninja log v5
+1	145	7036939040959551	build.ninja	aad4fbc426e99ed5
+23	448	7036927618217033	CMakeFiles/cpp_square_lab3.dir/src/App.cpp.obj	563b95fd771e1281
+1	429	7036927617994441	CMakeFiles/cpp_square_lab3.dir/src/Service/ConsoleDisplayService.cpp.obj	13260ab92f8017de
+7	435	7036927618035494	CMakeFiles/cpp_square_lab3.dir/src/Service/FileService.cpp.obj	7c815c821db30581
+15	438	7036927618117001	CMakeFiles/cpp_square_lab3.dir/main.cpp.obj	5792a727f88b5223

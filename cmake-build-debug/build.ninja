@@ -73,6 +73,12 @@ build CMakeFiles/cpp_square_lab3.dir/src/Service/FileService.cpp.obj: CXX_COMPIL
   OBJECT_DIR = CMakeFiles\cpp_square_lab3.dir
   OBJECT_FILE_DIR = CMakeFiles\cpp_square_lab3.dir\src\Service
 
+build CMakeFiles/cpp_square_lab3.dir/src/Geometry/Square.cpp.obj: CXX_COMPILER__cpp_square_lab3_Debug C$:/Users/Anton/Documents/GitHub/cpp-square-lab3/src/Geometry/Square.cpp || cmake_object_order_depends_target_cpp_square_lab3
+  DEP_FILE = CMakeFiles\cpp_square_lab3.dir\src\Geometry\Square.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\cpp_square_lab3.dir
+  OBJECT_FILE_DIR = CMakeFiles\cpp_square_lab3.dir\src\Geometry
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target cpp_square_lab3
@@ -81,7 +87,7 @@ build CMakeFiles/cpp_square_lab3.dir/src/Service/FileService.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable cpp_square_lab3.exe
 
-build cpp_square_lab3.exe: CXX_EXECUTABLE_LINKER__cpp_square_lab3_Debug CMakeFiles/cpp_square_lab3.dir/main.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/App.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/Service/ConsoleDisplayService.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/Service/FileService.cpp.obj
+build cpp_square_lab3.exe: CXX_EXECUTABLE_LINKER__cpp_square_lab3_Debug CMakeFiles/cpp_square_lab3.dir/main.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/App.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/Service/ConsoleDisplayService.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/Service/FileService.cpp.obj CMakeFiles/cpp_square_lab3.dir/src/Geometry/Square.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\cpp_square_lab3.dir

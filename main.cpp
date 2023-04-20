@@ -4,7 +4,6 @@
 
 int main(int argc, char* argv[]) {
     return App::create(
-            new Service::FileService(),
             new Service::ConsoleDisplayService()
     )->start(argc, argv);
 }

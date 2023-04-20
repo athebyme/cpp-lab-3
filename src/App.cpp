@@ -1,30 +1,32 @@
 #include "App.h"
 #include <iostream>
-#include "Service/FileService.h"
-
+#include "Geometry/Square.h"
 int App::start(int argc, char* argv[]) {
-    auto filename = argv[1];
-
+    Geometry::Square* square = nullptr;
     try {
-        this->fileService->open(filename);
-        this->fileService->writeString(argv[2]);
-        this->fileService->close();
-    } catch (std::exception const &e) {
+        square = Geometry::Square::create(argc, argv);
+        Geometry::Square comparableSquare = Geometry::Square(0, 0, 5, 0);
+        std::cout << square->getAngle() << std::endl;
+        std::cout << square->getSide()<< std::endl;
+        if((*square == comparableSquare)) std::cout << "Same"<< std::endl;
+        else{
+            std::cout << "Not Same"<< std::endl;
+            std::cout <<"Your Square | side: " << square->getSide() << " x: "<<square->getX()  << " y: " << square->getY()<< " angle: " << square->getAngle() <<std::endl;
+            std::cout << "Comparable Square | side: " << comparableSquare.getSide() << " x: "<<comparableSquare.getX()  << " y: " << comparableSquare.getY()<<  " angle: " << comparableSquare.getAngle() << std::endl;
+        }
+    }catch (std::exception const &e) {
         this->displayService->displayError();
         return -1;
     }
-
     return 0;
 }
 
 App::App(
-        Service::FileService *fileService,
         Service::DisplayServiceInterface* displayService
 ) {
-    this->fileService    = fileService;
     this->displayService = displayService;
 }
 
-App *App::create(Service::FileService* fileService, Service::DisplayServiceInterface* displayService) {
-    return new App(fileService, displayService);
+App *App::create(Service::DisplayServiceInterface* displayService) {
+    return new App(displayService);
 }
