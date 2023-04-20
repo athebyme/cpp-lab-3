@@ -35,7 +35,7 @@ namespace Geometry{
     }
 
     Square *Square::create(int argc, char* argv[]) {
-        if (argc < 4){
+        if (argc < 5){
             throw NotEnoughArgumentsException();
         }
         return new Square(std::atof(argv[1]),
