@@ -1,6 +1,10 @@
-#include <iostream>
+#include "src/App.h"
+#include "src/Service/ConsoleDisplayService.h"
+#include "src/Service/FileService.h"
 
-int main() {
-    std::cout << "its my first pull request" << std::endl;
-    return 0;
+int main(int argc, char* argv[]) {
+    return App::create(
+            new Service::FileService(),
+            new Service::ConsoleDisplayService()
+    )->start(argc, argv);
 }
